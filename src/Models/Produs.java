@@ -1,6 +1,5 @@
 package Models;
 import Interface.IMethodClass;
-
 import javax.xml.crypto.Data;
 
 public class Produs implements IMethodClass {
