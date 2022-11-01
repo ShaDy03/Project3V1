@@ -3,12 +3,26 @@ package Models;
 import Interface.IMethodUser;
 
 public class User implements IMethodUser {
-
     protected String UserName;
     protected String Name;
     protected int Age;
     protected String Password;
     protected String Role;
+
+    public User(String name, String userName, String password, int age, String role){
+        Name = name;
+        UserName = userName;
+        Password = password;
+        Age = age;
+        Role = role;
+    }
+
+    public User(String name, String userName, String password, int age){
+        Name = name;
+        UserName = userName;
+        Password = password;
+        Age = age;
+    }
 
     @Override
     public String getUserName() {
@@ -31,7 +45,6 @@ public class User implements IMethodUser {
     {
         Name=name;
     }
-
 
     @Override
     public int getAge()
