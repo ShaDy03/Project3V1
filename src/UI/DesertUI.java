@@ -1,6 +1,10 @@
 package UI;
 
 import javax.swing.*;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DesertUI {
     private JPanel DesertPanel;
@@ -12,4 +16,24 @@ public class DesertUI {
     private JRadioButton Type6;
     private JButton Back;
     private JButton AddDesert;
+
+    public DesertUI() {
+
+        Back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // inapoi meniu/pagina precedenta?
+            }
+        });
+
+        AddDesert.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Adaugare comanda, verificare comanda selectata.
+                //pagina principala sau pagina urmatoare ?
+                //Sau creare buton special doar pentru pagina principala?
+
+            }
+        });
+    }
 }
