@@ -18,6 +18,9 @@ public class CodeSource {
     public static JFrame Pizza = new JFrame("Gestiunea comenzilor online!");
     public static JFrame Soup = new JFrame("Gestiunea comenzilor online!");
 
+    public static JFrame Desert = new JFrame("Gestiunea comenzilor online!");
+    public static JFrame Drink = new JFrame("Gestiunea comenzilor online!");
+
     private CodeSource(){
 
     }
@@ -29,6 +32,10 @@ public class CodeSource {
         PrincipalePage.setContentPane(PrincipalPageUI.getInstance().getPanel());
         Pizza.setContentPane(PizzaUI.getInstance().getPanel());
         Soup.setContentPane(SoupUI.getInstance().getPanel());
+        Desert.setContentPane(DesertUI.getInstance().getPanel());
+        Drink.setContentPane(DrinkUI.getInstance().getPanel());
+        Desert.pack();
+        Drink.pack();
         Soup.pack();
         Pizza.pack();
         PrincipalePage.pack();
@@ -48,6 +55,8 @@ public class CodeSource {
         PrincipalePage.setVisible(false);
         Pizza.setVisible(false);
         Soup.setVisible(false);
+        Desert.setVisible(false);
+        Drink.setVisible(false);
         if(name == "Login")
             Login.setVisible(true);
         if(name == "Register")
@@ -58,6 +67,10 @@ public class CodeSource {
             Pizza.setVisible(true);
         if(name == "Soup")
             Soup.setVisible(true);
+        if(name == "Desert")
+            Desert.setVisible(true);
+        if(name == "Drink")
+            Drink.setVisible(true);
     }
 
 
