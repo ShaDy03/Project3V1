@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class DrinkUI {
 
-    private static DrinkUI instance;
+    private static DrinkUI instance = new DrinkUI();
     private JPanel DrinkPanel;
     private JRadioButton Type1;
     private JRadioButton Type2;
@@ -17,31 +17,8 @@ public class DrinkUI {
     private JButton Back;
     private JButton AddDrink;
 
-    private DrinkUI(JPanel drinkPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addDrink)
-    {
-        DrinkPanel=drinkPanel;
-        Type1=type1;
-        Type2=type2;
-        Type3=type3;
-        Type4=type4;
-        Type5=type5;
-        Type6=type6;
-        Back=back;
-        AddDrink=addDrink;
 
-    }
-    public static DrinkUI getInstance(JPanel drinkPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addDrink)
-    {
-        if(instance==null)
-        {
-            instance = new DrinkUI(drinkPanel,type1,type2,type3,type4,type5,type6,back,addDrink);
-        }
-        return instance;
-    }
-
-
-
-    public DrinkUI()
+    private DrinkUI()
     {
         Back.addActionListener(new ActionListener() {
             @Override
@@ -58,6 +35,11 @@ public class DrinkUI {
                 //Sau creare buton special doar pentru pagina principala?
             }
         });
+    }
+
+    public static DrinkUI getInstance()
+    {
+        return instance;
     }
 
     public boolean isAnywaySelected()

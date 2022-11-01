@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RegisterUI {
+    private static RegisterUI instance = new RegisterUI();
     private JPanel RegisterPanel;
     private JTextField textFieldName;
     private JTextField textFieldSecondName;
@@ -18,8 +19,9 @@ public class RegisterUI {
     private JLabel MessageSecond;
     private JLabel MessageAge;
     private JLabel MessagePassword;
+    private JButton RegisterBtn;
 
-    public RegisterUI()
+    private RegisterUI()
     {
         ResetBtn.addActionListener(new ActionListener() {
             @Override
@@ -35,6 +37,11 @@ public class RegisterUI {
 
             }
         });
+    }
+
+    public static RegisterUI getInstance()
+    {
+        return instance;
     }
 
     public JPanel getRegisterPanel() {

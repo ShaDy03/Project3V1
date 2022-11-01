@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class DesertUI {
 
-    private static DesertUI instance; // singleton
+    private static DesertUI instance = new DesertUI(); // singleton
     private JPanel DesertPanel;
     private JRadioButton Type1;
     private JRadioButton Type2;
@@ -19,31 +19,9 @@ public class DesertUI {
     private JButton Back;
     private JButton AddDesert;
 
-    private DesertUI(JPanel desertPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addDesert)
-    {
-        DesertPanel=desertPanel;
-        Type1=type1;
-        Type2=type2;
-        Type3=type3;
-        Type4=type4;
-        Type5=type5;
-        Type6=type6;
-        Back=back;
-        AddDesert=addDesert;
-
-    }
-    public static DesertUI getInstance(JPanel desertPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addDesert)
-    {
-        if(instance==null)
-        {
-            instance = new DesertUI(desertPanel,type1,type2,type3,type4,type5,type6,back,addDesert);
-        }
-        return instance;
-    }
 
 
-
-    public DesertUI() {
+    private DesertUI() {
 
         Back.addActionListener(new ActionListener() {
             @Override
@@ -61,6 +39,11 @@ public class DesertUI {
 
             }
         });
+    }
+
+    public static DesertUI getInstance()
+    {
+        return instance;
     }
 
     public boolean isAnywaySelected()

@@ -18,31 +18,7 @@ public class SoupUI {
     private JButton AddSoup;
 
 
-    private SoupUI(JPanel soupPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addSoup)
-    {
-        SoupPanel=soupPanel;
-        Type1=type1;
-        Type2=type2;
-        Type3=type3;
-        Type4=type4;
-        Type5=type5;
-        Type6=type6;
-        Back=back;
-        AddSoup=addSoup;
-
-    }
-    public static SoupUI getInstance(JPanel soupPanel, JRadioButton type1, JRadioButton type2, JRadioButton type3, JRadioButton type4, JRadioButton type5, JRadioButton type6,JButton back,JButton addSoup)
-    {
-        if(instance==null)
-        {
-            instance = new SoupUI(soupPanel,type1,type2,type3,type4,type5,type6,back,addSoup);
-        }
-        return instance;
-    }
-
-
-
-    public SoupUI() {
+    private SoupUI() {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,6 +34,11 @@ public class SoupUI {
                 //in functie de ce avem in lista, tipurile de ciorbe se fac vizibile cu mesajul respectiv
             }
         });
+    }
+
+    public static SoupUI getInstance()
+    {
+        return instance;
     }
 
     public boolean isAnywaySelected()
