@@ -24,8 +24,6 @@ public class CodeSource {
 
     public static void main(String[] args)
     {
-        var adminUser = new User("admin", "admin", "12345", 20, "administrator");
-        UserList.addProdus(adminUser);
         Login.setContentPane(LoginPageUI.getInstance().getPanel());
         Register.setContentPane(RegisterUI.getInstance().getPanel());
         PrincipalePage.setContentPane(PrincipalPageUI.getInstance().getPanel());
