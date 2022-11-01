@@ -4,11 +4,22 @@ import Interface.IMethodUser;
 
 public class User implements IMethodUser {
 
+    protected String UserName;
     protected String Name;
     protected String SecondName;
     protected int Age;
     protected String Password;
     protected String Role;
+
+    @Override
+    public String getUserName() {
+        return UserName;
+    }
+
+    @Override
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
 
     @Override
     public String getName()

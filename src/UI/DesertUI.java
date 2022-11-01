@@ -37,8 +37,27 @@ public class DesertUI {
         });
     }
 
+    public boolean isAnywaySelected()
+    {
+        if(Type1.isSelected())
+            return true;
+        if(Type2.isSelected())
+            return true;
+        if(Type3.isSelected())
+            return true;
+        if(Type4.isSelected())
+            return true;
+        if(Type5.isSelected())
+            return true;
+        if(Type6.isSelected())
+            return true;
+        return false;
+    }
+
     public JPanel getDesertPanel() {
         return DesertPanel;
     }
+
+
 
 }
