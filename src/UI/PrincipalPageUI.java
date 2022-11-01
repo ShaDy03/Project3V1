@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 public class PrincipalPageUI {
+    private static PrincipalPageUI Instance = new PrincipalPageUI();
     private JLabel Message;
     private JLabel Message2;
     private JRadioButton Soup;
@@ -17,7 +18,7 @@ public class PrincipalPageUI {
     private JButton Purchase;
     private JPanel PrincipalPanel;
 
-    public PrincipalPageUI() {
+    private PrincipalPageUI() {
 
         Purchase.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
@@ -30,5 +31,13 @@ public class PrincipalPageUI {
                 }
             }
         });
+    }
+
+    public static PrincipalPageUI getInstance(){
+        return Instance;
+    }
+
+    public JPanel getPanel(){
+        return PrincipalPanel;
     }
 }

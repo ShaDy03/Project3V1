@@ -1,5 +1,7 @@
 package UI;
 import Models.CodeSource;
+import Models.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +22,15 @@ public class LoginPageUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CodeSource.getInstance().setVisible(REGISTER);
+            }
+        });
+        Login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for(User i: CodeSource.getInstance().getUserList()){
+                    if(i.getUserName().equals(UserName.getText()) && i.getPassword().equals(Password.getText()))
+                        CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
+                }
             }
         });
     }

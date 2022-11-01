@@ -67,7 +67,7 @@
         <properties>
           <background color="-16301818"/>
           <enabled value="false"/>
-          <foreground color="-4474182"/>
+          <foreground color="-16777216"/>
           <hideActionText value="true"/>
           <text value="Cauta..."/>
         </properties>
@@ -78,7 +78,8 @@
         </constraints>
         <properties>
           <background color="-4512987"/>
-          <enabled value="false"/>
+          <enabled value="true"/>
+          <foreground color="-16777216"/>
           <text value="Comanda"/>
         </properties>
       </component>
@@ -107,6 +108,7 @@
         <properties>
           <background color="-4475872"/>
           <enabled value="false"/>
+          <foreground color="-16777216"/>
           <hideActionText value="true"/>
           <text value="Comanda mea"/>
         </properties>

@@ -1,12 +1,12 @@
 package UI;
-
+import Models.CodeSource;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SoupUI {
-
-    private static SoupUI instance;
+    private final String PRINCIPALEPAGE = "PrincipalePage";
+    private static SoupUI Instance = new SoupUI();
     private JPanel SoupPanel;
     private JRadioButton Type1;
     private JRadioButton Type2;
@@ -22,14 +22,14 @@ public class SoupUI {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //inapoi pe pagina principala
+                CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
             }
         });
 
         AddSoup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //inapoi pe pagina principala plus adaugare comanda
+                CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
                 //verificare ca este selectata macar una din variante
                 //in functie de ce avem in lista, tipurile de ciorbe se fac vizibile cu mesajul respectiv
             }
@@ -38,7 +38,7 @@ public class SoupUI {
 
     public static SoupUI getInstance()
     {
-        return instance;
+        return Instance;
     }
 
     public boolean isAnywaySelected()

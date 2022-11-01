@@ -1,11 +1,13 @@
 package UI;
 
+import Models.CodeSource;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PizzaUI {
-
+    private final String PRINCIPALEPAGE = "PrincipalePage";
     public static PizzaUI instance = new PizzaUI();
     private JPanel PizzaPanel;
     private JRadioButton Type1;
@@ -26,16 +28,14 @@ public class PizzaUI {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // inapoi meniu/pagina precedenta?
+                CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
             }
         });
         AddPizza.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
                 //Adaugare comanda, verificare comanda selectata.
-                //pagina principala sau pagina urmatoare ?.
-                //Sau creare buton special doar pentru pagina principala?
             }
         });
     }
