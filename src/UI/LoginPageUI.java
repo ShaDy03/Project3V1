@@ -15,7 +15,6 @@ public class LoginPageUI {
     private JPanel LoginPanel;
 
     private LoginPageUI(){
-
         Register.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
