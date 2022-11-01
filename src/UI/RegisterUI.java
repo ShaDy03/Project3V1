@@ -44,7 +44,7 @@ public class RegisterUI {
         return instance;
     }
 
-    public JPanel getRegisterPanel() {
+    public JPanel getPanel() {
         return RegisterPanel;
     }
 }
