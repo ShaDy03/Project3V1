@@ -1,5 +1,7 @@
 package UI;
 
+import Models.CodeSource;
+
 import javax.swing.*;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
@@ -8,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class DesertUI {
 
+    private final String Desert = "PrincipalePage";
     private static DesertUI instance = new DesertUI(); // singleton
     private JPanel DesertPanel;
     private JRadioButton Type1;
@@ -26,16 +29,16 @@ public class DesertUI {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // inapoi meniu/pagina precedenta?
+                CodeSource.getInstance().setVisible("Login");
+
             }
         });
 
         AddDesert.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Adaugare comanda, verificare comanda selectata.
-                //pagina principala sau pagina urmatoare ?
-                //Sau creare buton special doar pentru pagina principala?
+                CodeSource.getInstance().setVisible(Desert);
+
 
             }
         });

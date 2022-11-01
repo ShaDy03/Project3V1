@@ -1,11 +1,14 @@
 package UI;
 
+import Models.CodeSource;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DrinkUI {
 
+    private static String Drink = "PrincipalePage";
     private static DrinkUI instance = new DrinkUI();
     private JPanel DrinkPanel;
     private JRadioButton Type1;
@@ -23,16 +26,14 @@ public class DrinkUI {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // inapoi meniu/pagina precedenta?
+                CodeSource.getInstance().setVisible("Login");
 
             }
         });
         AddDrink.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Adaugare comanda, verificare comanda selectata.
-                //pagina principala sau pagina urmatoare ?.
-                //Sau creare buton special doar pentru pagina principala?
+                CodeSource.getInstance().setVisible(Drink);
             }
         });
     }
