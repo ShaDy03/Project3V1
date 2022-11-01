@@ -6,10 +6,24 @@ public class User implements IMethodUser {
 
     protected String UserName;
     protected String Name;
-    protected String SecondName;
     protected int Age;
     protected String Password;
     protected String Role;
+
+    public User(String name, String userName, String password, int age, String role){
+        Name = name;
+        UserName = userName;
+        Password = password;
+        Age = age;
+        Role = role;
+    }
+
+    public User(String name, String userName, String password, int age){
+        Name = name;
+        UserName = userName;
+        Password = password;
+        Age = age;
+    }
 
     @Override
     public String getUserName() {
@@ -31,18 +45,6 @@ public class User implements IMethodUser {
     public void setName(String name)
     {
         Name=name;
-    }
-
-    @Override
-    public String getSecondName()
-    {
-        return SecondName;
-    }
-
-    @Override
-    public void setSecondName(String secondName)
-    {
-        SecondName=secondName;
     }
 
     @Override
