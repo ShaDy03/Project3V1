@@ -28,7 +28,7 @@ public class LoginPageUI {
         return Instance;
     }
 
-    public JPanel getLoginPanel(){
+    public JPanel getPanel(){
         return LoginPanel;
     }
 }

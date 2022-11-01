@@ -58,7 +58,7 @@ public class SoupUI {
         return false;
     }
 
-    public JPanel getSoupPanel()
+    public JPanel getPanel()
     {
         return SoupPanel;
     }

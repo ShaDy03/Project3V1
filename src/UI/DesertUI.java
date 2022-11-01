@@ -63,7 +63,7 @@ public class DesertUI {
         return false;
     }
 
-    public JPanel getDesertPanel() {
+    public JPanel getPanel() {
         return DesertPanel;
     }
 

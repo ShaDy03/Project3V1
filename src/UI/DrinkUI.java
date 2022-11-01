@@ -59,7 +59,7 @@ public class DrinkUI {
         return false;
     }
 
-    public JPanel getDrinkPanel() {
+    public JPanel getPanel() {
         return DrinkPanel;
     }
 
