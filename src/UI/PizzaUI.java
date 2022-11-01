@@ -51,10 +51,9 @@ public class PizzaUI {
         return false;
     }
 
-    // Creare RegisterUI - ok
-    // Creare username in clasa user - ok
-    // Creare frame main - ok
-    // creare singleton design - x
+
+
+
 
 
 
