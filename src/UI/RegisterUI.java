@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RegisterUI {
+    private final String LOGIN = "Login";
     private static RegisterUI instance = new RegisterUI();
     private JPanel RegisterPanel;
     private JTextField textFieldName;
@@ -40,7 +41,7 @@ public class RegisterUI {
         LoginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setPanel(LoginPageUI.getInstance().getPanel());
+                CodeSource.getInstance().setVisible(LOGIN);
 
             }
         });

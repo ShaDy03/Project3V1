@@ -1,11 +1,12 @@
 package UI;
 import Models.CodeSource;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginPageUI {
+    private final String PRINCIPALEPAGE = "PrincipalePage";
+    private final String REGISTER = "Register";
     private static LoginPageUI Instance = new LoginPageUI();
     private JLabel Message;
     private JTextField UserName;
@@ -18,7 +19,7 @@ public class LoginPageUI {
         Register.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setPanel(RegisterUI.getInstance().getPanel());
+                CodeSource.getInstance().setVisible(REGISTER);
             }
         });
     }

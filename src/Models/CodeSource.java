@@ -1,6 +1,8 @@
 package Models;
 import Data.DataClass;
 import UI.LoginPageUI;
+import UI.RegisterUI;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -11,33 +13,34 @@ public class CodeSource {
     private static DataClass<Pizza> PizzaList = new DataClass<Pizza>();
     private static DataClass<Soup> SoupList = new DataClass<Soup>();
     private static DataClass<User> UserList = new DataClass<User>();
-    public static JFrame Frame = new JFrame("Gestiunea comenzilor online!");
+    public static JFrame Login = new JFrame("Gestiunea comenzilor online!");
+    public static JFrame Register = new JFrame("Gestiunea comenzilor online!");
 
     private CodeSource(){
-        var adminUser = new User("admin", "admin", "12345", 20, "administrator");
-        UserList.addProdus(adminUser);
+
     }
 
     public static void main(String[] args)
     {
-
-        CodeSource.getInstance().setPanel(LoginPageUI.getInstance().getPanel());
-        Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Frame.setSize(650,650);
-        Frame.setResizable(false);
-        Frame.setLayout(null);
-        Frame.setVisible(true);
-
-
+        Login.setContentPane(LoginPageUI.getInstance().getPanel());
+        Register.setContentPane(RegisterUI.getInstance().getPanel());
+        Register.pack();
+        Login.pack();
+        Login.setVisible(true);
     }
+
 
     public static CodeSource getInstance(){
         return Instance;
     }
 
-    public void setPanel(JPanel panel){
-        Frame.setContentPane(panel);
-        Frame.pack();
+    public void setVisible(String name){
+        Login.setVisible(false);
+        Register.setVisible(false);
+        if(name == "Login")
+            Login.setVisible(true);
+        if(name == "Register")
+            Register.setVisible(true);
     }
 
     public ArrayList<Desert> getDesertList(){
