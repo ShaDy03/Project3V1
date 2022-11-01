@@ -3,7 +3,6 @@ package Models;
 import Interface.IMethodUser;
 
 public class User implements IMethodUser {
-
     protected String UserName;
     protected String Name;
     protected int Age;
