@@ -15,7 +15,7 @@ public class CodeSource {
     public static void main(String[] args)
     {
 
-        CodeSource.getInstance().setPanel(LoginPageUI.getInstance().getLoginPanel());
+        CodeSource.getInstance().setPanel(LoginPageUI.getInstance().getPanel());
         Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Frame.setSize(650,650);
         Frame.setResizable(false);

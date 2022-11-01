@@ -1,5 +1,7 @@
 package UI;
 
+import Models.CodeSource;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,8 +17,8 @@ public class RegisterUI {
     private JButton ResetBtn;
     private JLabel Message1;
     private JLabel Message2;
+    private JLabel MessageUserName;
     private JLabel MessageName;
-    private JLabel MessageSecond;
     private JLabel MessageAge;
     private JLabel MessagePassword;
     private JButton RegisterBtn;
@@ -26,14 +28,19 @@ public class RegisterUI {
         ResetBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Reset button
-
+                if(e.getSource()==ResetBtn)
+                {
+                    textFieldName.setText("");
+                    textFieldSecondName.setText("");
+                    textFieldAge.setText("");
+                    passwordField1.setText("");
+                }
             }
         });
         LoginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Login button
+                CodeSource.getInstance().setPanel(LoginPageUI.getInstance().getPanel());
 
             }
         });

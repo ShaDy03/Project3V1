@@ -68,7 +68,7 @@ public class PizzaUI {
 
 
 
-    public JPanel getPizzaPanel() {
+    public JPanel getPanel() {
         return PizzaPanel;
     }
 

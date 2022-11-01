@@ -6,7 +6,6 @@ public class User implements IMethodUser {
 
     protected String UserName;
     protected String Name;
-    protected String SecondName;
     protected int Age;
     protected String Password;
     protected String Role;
@@ -33,17 +32,6 @@ public class User implements IMethodUser {
         Name=name;
     }
 
-    @Override
-    public String getSecondName()
-    {
-        return SecondName;
-    }
-
-    @Override
-    public void setSecondName(String secondName)
-    {
-        SecondName=secondName;
-    }
 
     @Override
     public int getAge()
