@@ -36,4 +36,9 @@ public class DesertUI {
             }
         });
     }
+
+    public JPanel getDesertPanel() {
+        return DesertPanel;
+    }
+
 }

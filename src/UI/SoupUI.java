@@ -32,4 +32,10 @@ public class SoupUI {
             }
         });
     }
+
+    public JPanel getSoupPanel()
+    {
+        return SoupPanel;
+    }
+
 }

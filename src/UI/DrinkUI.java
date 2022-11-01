@@ -34,4 +34,10 @@ public class DrinkUI {
             }
         });
     }
+
+    public JPanel getDrinkPanel() {
+        return DrinkPanel;
+    }
+
+
 }
