@@ -66,8 +66,39 @@ public class DrinkUI {
         return false;
     }
 
+
+
     public JPanel getPanel() {
         return DrinkPanel;
+    }
+
+    public JRadioButton getType1()
+    {
+        return Type1;
+    }
+    public JRadioButton getType2()
+    {
+        return Type2;
+
+    }
+
+    public JRadioButton getType3()
+    {
+        return Type3;
+    }
+
+    public JRadioButton getType4()
+    {
+        return Type4;
+    }
+    public JRadioButton getType5()
+    {
+        return Type5;
+    }
+
+    public JRadioButton getType6()
+    {
+        return Type6;
     }
 
 
