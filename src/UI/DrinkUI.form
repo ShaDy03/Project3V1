@@ -72,7 +72,7 @@
           <text value="Adaugare comanda"/>
         </properties>
       </component>
-      <component id="64071" class="javax.swing.JLabel" binding="PriceType1">
+      <component id="64071" class="javax.swing.JLabel" binding="TypePrice1">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -80,7 +80,7 @@
           <text value="7"/>
         </properties>
       </component>
-      <component id="5e86d" class="javax.swing.JLabel" binding="PriceType2">
+      <component id="5e86d" class="javax.swing.JLabel" binding="TypePrice2">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -88,7 +88,7 @@
           <text value="7"/>
         </properties>
       </component>
-      <component id="d444" class="javax.swing.JLabel" binding="PriceType3">
+      <component id="d444" class="javax.swing.JLabel" binding="TypePrice3">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -96,7 +96,7 @@
           <text value="11"/>
         </properties>
       </component>
-      <component id="824ed" class="javax.swing.JLabel" binding="PriceType4">
+      <component id="824ed" class="javax.swing.JLabel" binding="TypePrice4">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -104,7 +104,7 @@
           <text value="9"/>
         </properties>
       </component>
-      <component id="8f82f" class="javax.swing.JLabel" binding="PriceType5">
+      <component id="8f82f" class="javax.swing.JLabel" binding="TypePrice5">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -112,7 +112,7 @@
           <text value="5"/>
         </properties>
       </component>
-      <component id="e8a4e" class="javax.swing.JLabel" binding="PriceType6">
+      <component id="e8a4e" class="javax.swing.JLabel" binding="TypePrice6">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
