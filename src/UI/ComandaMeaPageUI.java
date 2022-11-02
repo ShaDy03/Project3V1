@@ -41,7 +41,7 @@ public class ComandaMeaPageUI {
         RemoveOrderBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ErrorMessage();
             }
         });
 
@@ -70,6 +70,14 @@ public class ComandaMeaPageUI {
                 "Comanda ta in valoare de " + TotalPayment.getText() + " a fost plasata!",
                 "Succesfuly",
                 JOptionPane.INFORMATION_MESSAGE
+        );
+    }
+    private void ErrorMessage(){
+        JOptionPane.showMessageDialog(
+                new JFrame(),
+                "Urmeaza a fi implementata!",
+                "Feature",
+                JOptionPane.ERROR_MESSAGE
         );
     }
 }
