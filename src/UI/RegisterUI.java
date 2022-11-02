@@ -23,6 +23,7 @@ public class RegisterUI {
     private JLabel MessageAge;
     private JLabel MessagePassword;
     private JButton RegisterBtn;
+    private JLabel TextSuccessful;
 
     private RegisterUI()
     {
@@ -43,6 +44,23 @@ public class RegisterUI {
             public void actionPerformed(ActionEvent e) {
                 CodeSource.getInstance().setVisible(LOGIN);
 
+            }
+        });
+
+        RegisterBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource()==RegisterBtn)
+                {
+                    /*
+                    String userIdName = textFieldName.getText();
+                    String userIdSecondName = textFieldSecondName.getText();
+                    int userAge = Integer.parseInt(textFieldAge.getText());
+                    String password = String.valueOf(passwordField1.getPassword());
+                     */
+                    TextSuccessful.setText("Register successful");
+
+                }
             }
         });
     }

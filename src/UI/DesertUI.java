@@ -21,7 +21,12 @@ public class DesertUI {
     private JRadioButton Type6;
     private JButton Back;
     private JButton AddDesert;
-
+    private JLabel PriceType1;
+    private JLabel PriceType2;
+    private JLabel PriceType3;
+    private JLabel PriceType4;
+    private JLabel PriceType5;
+    private JLabel PriceType6;
 
 
     private DesertUI() {
@@ -29,7 +34,7 @@ public class DesertUI {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible("PrincipalePage");
+                CodeSource.getInstance().setVisible(Desert);
 
             }
         });

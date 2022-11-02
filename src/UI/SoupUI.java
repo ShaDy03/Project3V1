@@ -16,6 +16,12 @@ public class SoupUI {
     private JRadioButton Type6;
     private JButton Back;
     private JButton AddSoup;
+    private JLabel TypePrice1;
+    private JLabel TypePrice2;
+    private JLabel TypePrice3;
+    private JLabel TypePrice4;
+    private JLabel TypePrice5;
+    private JLabel TypePrice6;
 
 
     private SoupUI() {

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="UI.ComandaMeaPageUI">
+  <grid id="27dc6" binding="ComandaMeaPanel" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="27f9c" class="javax.swing.JLabel" binding="MessageYourOrder">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Your Order:"/>
+        </properties>
+      </component>
+      <component id="59a4c" class="javax.swing.JList" binding="ListOrder">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8ff17" class="javax.swing.JButton" binding="PrincipalPageBtn">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Pagina principala"/>
+        </properties>
+      </component>
+      <component id="ace20" class="javax.swing.JButton" binding="ContinueShoppingBtn">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Continuare cumparaturi"/>
+        </properties>
+      </component>
+      <component id="6a580" class="javax.swing.JButton" binding="PlaceYourOrderBtn">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Plaseaza comanda"/>
+        </properties>
+      </component>
+      <component id="9c58b" class="javax.swing.JLabel" binding="MessageTotalPayment">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Total payment:"/>
+        </properties>
+      </component>
+      <component id="8acc1" class="javax.swing.JLabel" binding="TotalPayment">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2a42b" class="javax.swing.JButton" binding="RemoveOrderBtn">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <text value="Excludere produs"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
