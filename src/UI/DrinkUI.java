@@ -39,7 +39,7 @@ public class DrinkUI {
         AddDrink.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible(Drink);
+                //CodeSource.getInstance().setVisible(Drink);
             }
         });
     }

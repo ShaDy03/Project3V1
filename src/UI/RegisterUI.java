@@ -58,6 +58,7 @@ public class RegisterUI {
                     int userAge = Integer.parseInt(textFieldAge.getText());
                     String password = String.valueOf(passwordField1.getPassword());
                      */
+                    CodeSource.getInstance().setVisible(LOGIN);
                     TextSuccessful.setText("Register successful");
 
                 }

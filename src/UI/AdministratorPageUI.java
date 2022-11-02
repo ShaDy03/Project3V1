@@ -26,7 +26,7 @@ public class AdministratorPageUI {
         AdaugareBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible(Admin);
+                //CodeSource.getInstance().setVisible(Admin);
 
             }
         });
