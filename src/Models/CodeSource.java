@@ -21,6 +21,10 @@ public class CodeSource {
     public static JFrame Desert = new JFrame("Gestiunea comenzilor online!");
     public static JFrame Drink = new JFrame("Gestiunea comenzilor online!");
 
+    public static JFrame Admin = new JFrame("Gestiunea comenzilor online!");
+
+    public static JFrame Command = new JFrame("Gestiunea comenzilor online!");
+
     private CodeSource(){
 
     }
@@ -36,12 +40,19 @@ public class CodeSource {
         Soup.setContentPane(SoupUI.getInstance().getPanel());
         Desert.setContentPane(DesertUI.getInstance().getPanel());
         Drink.setContentPane(DrinkUI.getInstance().getPanel());
+        Admin.setContentPane(AdministratorPageUI.getInstance().getPanel());
+        Command.setContentPane(ComandaMeaPageUI.getInstance().getPanel());
+
         Desert.pack();
         Drink.pack();
         Soup.pack();
         Pizza.pack();
         PrincipalePage.pack();
         Register.pack();
+
+        Admin.pack();
+        Command.pack();
+
         Login.pack();
         Login.setVisible(true);
     }
@@ -59,6 +70,9 @@ public class CodeSource {
         Soup.setVisible(false);
         Desert.setVisible(false);
         Drink.setVisible(false);
+        Admin.setVisible(false);
+        Command.setVisible(false);
+
         if(name == "Login")
             Login.setVisible(true);
         if(name == "Register")
@@ -73,6 +87,11 @@ public class CodeSource {
             Desert.setVisible(true);
         if(name == "Drink")
             Drink.setVisible(true);
+        if(name == "Admin")
+            Admin.setVisible(true);
+        if(name == "Command")
+            Command.setVisible(true);
+
     }
 
 
