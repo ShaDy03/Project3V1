@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AdministratorPageUI {
-
     private final String ADMIN = "PrincipalePage";
     public static AdministratorPageUI instance = new AdministratorPageUI();
     private JPanel AdministratorPanel;
@@ -20,15 +19,12 @@ public class AdministratorPageUI {
     private JLabel MesagePrice;
     private JLabel MessageDropDown;
     private JButton PrincipalPageBtn;
-
     private AdministratorPageUI()
     {
     }
-
     public static AdministratorPageUI getInstance(){
         return instance;
     }
-
     public JPanel getPanel()
     {
         return AdministratorPanel;

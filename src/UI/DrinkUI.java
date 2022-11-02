@@ -1,14 +1,10 @@
 package UI;
-
 import Models.CodeSource;
 import Models.Drink;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class DrinkUI {
-
     private static String Drink = "PrincipalePage";
     private static DrinkUI instance = new DrinkUI();
     private JPanel DrinkPanel;
@@ -26,8 +22,6 @@ public class DrinkUI {
     private JLabel TypePrice4;
     private JLabel TypePrice5;
     private JLabel TypePrice6;
-
-
     private DrinkUI()
     {
         Back.addActionListener(new ActionListener() {

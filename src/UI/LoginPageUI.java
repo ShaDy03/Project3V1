@@ -1,11 +1,9 @@
 package UI;
 import Models.CodeSource;
 import Models.User;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class LoginPageUI {
     private final String PRINCIPALEPAGE = "PrincipalePage";
     private final String REGISTER = "Register";
@@ -44,15 +42,12 @@ public class LoginPageUI {
             }
         });
     }
-
     public static LoginPageUI getInstance(){
         return Instance;
     }
-
     public JPanel getPanel(){
         return LoginPanel;
     }
-
     private void Message(){
         JOptionPane.showMessageDialog(
                 new JFrame(),

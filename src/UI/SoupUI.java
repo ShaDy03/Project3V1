@@ -1,12 +1,9 @@
 package UI;
 import Models.CodeSource;
 import Models.Soup;
-
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class SoupUI {
     private final String PRINCIPALEPAGE = "PrincipalePage";
     private static SoupUI Instance = new SoupUI();
@@ -25,8 +22,6 @@ public class SoupUI {
     private JLabel TypePrice4;
     private JLabel TypePrice5;
     private JLabel TypePrice6;
-
-
     private SoupUI() {
         Back.addActionListener(new ActionListener() {
             @Override
@@ -96,12 +91,10 @@ public class SoupUI {
             }
         });
     }
-
     public static SoupUI getInstance()
     {
         return Instance;
     }
-
     public boolean isAnywaySelected()
     {
         if(Type1.isSelected())
@@ -118,9 +111,6 @@ public class SoupUI {
             return true;
         return false;
     }
-
-
-
     public JRadioButton getType1()
     {
         return Type1;
@@ -130,12 +120,10 @@ public class SoupUI {
         return Type2;
 
     }
-
     public JRadioButton getType3()
     {
         return Type3;
     }
-
     public JRadioButton getType4()
     {
         return Type4;
@@ -144,13 +132,10 @@ public class SoupUI {
     {
         return Type5;
     }
-
     public JRadioButton getType6()
     {
         return Type6;
     }
-
-
     public JLabel getTypePrice1()
     {
         return TypePrice1;
@@ -175,12 +160,9 @@ public class SoupUI {
     {
         return  TypePrice6;
     }
-
-
     public void setTypePrice1(javax.swing.JLabel typePrice1) {
         TypePrice1 = typePrice1;
     }
-
     public void setTypePrice2(JLabel typePrice2) {
         TypePrice2 = typePrice2;
     }
@@ -188,22 +170,17 @@ public class SoupUI {
     {
         TypePrice3 = typePrice3;
     }
-
     public void setTypePrice4(JLabel typePrice4) {
         TypePrice4 = typePrice4;
     }
-
     public void setTypePrice5(JLabel typePrice5) {
         TypePrice5 = typePrice5;
     }
-
     public void setTypePrice6(JLabel typePrice6) {
         TypePrice6 = typePrice6;
     }
-
     public JPanel getPanel()
     {
         return SoupPanel;
     }
-
 }

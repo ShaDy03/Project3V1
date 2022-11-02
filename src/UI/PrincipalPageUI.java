@@ -6,20 +6,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
-
 public class PrincipalPageUI {
     private static PrincipalPageUI Instance = new PrincipalPageUI();
     private static String ADMINISTRATOR = "Admin"; // adaugare produs
     private static String PP = "PrincipalePage"; // adaugare produs
     private static String LOGIN = "Login"; // adaugare produs
     private static String COMMAND = "Command"; // comanda mea
-
     private static String PIZZA ="Pizza"; // pizza
-
     private static String SOUP = "Soup"; // ciorba/supa
-
     private static String DESERT = "Desert"; // desert
-
     private static String DRINK = "Drink"; // Bautura
     private JLabel Message;
     private JLabel Message2;
@@ -32,9 +27,7 @@ public class PrincipalPageUI {
     private JPanel PrincipalPanel;
     private JButton AdaugareProdusBtn;
     private JButton LogOut;
-
     private PrincipalPageUI() {
-
         Purchase.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {
@@ -46,7 +39,6 @@ public class PrincipalPageUI {
                 }
             }
         });
-
         AdaugareProdusBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,7 +46,6 @@ public class PrincipalPageUI {
                 CodeSource.getInstance().setVisible(PP);
             }
         });
-
         MyOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +60,6 @@ public class PrincipalPageUI {
                 CodeSource.getInstance().setVisible(COMMAND);// comanda mea
             }
         });
-
         Purchase.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -83,8 +73,6 @@ public class PrincipalPageUI {
                     CodeSource.getInstance().setVisible(DRINK);
             }
         });
-
-
         LogOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,35 +80,27 @@ public class PrincipalPageUI {
             }
         });
     }
-
     public static PrincipalPageUI getInstance(){
         return Instance;
     }
-
     public JPanel getPanel(){
         return PrincipalPanel;
     }
-
     public JRadioButton getSoup(){
         return Soup;
     }
-
     public JRadioButton getPizza(){
         return Pizza;
     }
-
     public JRadioButton getDrink(){
         return Drink;
     }
-
     public JRadioButton getDesert(){
         return Desert;
     }
-
     public JButton getAdaugareProdusBtn(){
         return AdaugareProdusBtn;
     }
-
     public String toString(Produs produs){
         StringBuffer message = new StringBuffer();
         if( produs.getClass().getTypeName() == "Models.Desert")

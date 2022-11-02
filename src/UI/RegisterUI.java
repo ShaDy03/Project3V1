@@ -1,12 +1,9 @@
 package UI;
-
 import Models.CodeSource;
 import Models.User;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class RegisterUI {
     private final String LOGIN = "Login";
     private static RegisterUI instance = new RegisterUI();
@@ -52,12 +49,10 @@ public class RegisterUI {
             }
         });
     }
-
     public static RegisterUI getInstance()
     {
         return instance;
     }
-
     public JPanel getPanel() {
         return RegisterPanel;
     }

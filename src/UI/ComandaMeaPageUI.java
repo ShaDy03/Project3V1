@@ -1,14 +1,11 @@
 package UI;
-
 import Models.CodeSource;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class ComandaMeaPageUI {
-
     private final String COMANDA = "PrincipalePage";
     private static ComandaMeaPageUI insance = new ComandaMeaPageUI();
     private JList ListOrder; // lista produse
@@ -16,10 +13,9 @@ public class ComandaMeaPageUI {
     private JButton PlaceYourOrderBtn;
     private JLabel MessageYourOrder;
     private JLabel MessageTotalPayment;
-    private JLabel TotalPayment; // total de plata
+    private JLabel TotalPayment;
     private JButton RemoveOrderBtn;
-    private JPanel ComandaMeaPanel; // panel
-
+    private JPanel ComandaMeaPanel;
     private ComandaMeaPageUI()
     {
         ContinueShoppingBtn.addActionListener(new ActionListener() {
@@ -28,7 +24,6 @@ public class ComandaMeaPageUI {
                 CodeSource.getInstance().setVisible(COMANDA);
             }
         });
-
         PlaceYourOrderBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,17 +32,13 @@ public class ComandaMeaPageUI {
                 CodeSource.getInstance().setVisible(COMANDA);
             }
         });
-
         RemoveOrderBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ErrorMessage();
             }
         });
-
-
     }
-
     public static ComandaMeaPageUI getInstance()
     {
         return insance;
@@ -63,7 +54,6 @@ public class ComandaMeaPageUI {
     public void setListOrder(ArrayList<String> lista){
         ListOrder.setListData(lista.toArray());
     }
-
     private void Message(){
         JOptionPane.showMessageDialog(
                 new JFrame(),

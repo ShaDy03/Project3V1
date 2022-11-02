@@ -1,14 +1,10 @@
 package UI;
-
 import Models.CodeSource;
 import Models.Desert;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class DesertUI {
-
     private final String Desert = "PrincipalePage";
     private static DesertUI instance = new DesertUI(); // singleton
     private JPanel DesertPanel;
@@ -26,10 +22,7 @@ public class DesertUI {
     private JLabel TypePrice4;
     private JLabel TypePrice5;
     private JLabel TypePrice6;
-
-
     private DesertUI() {
-
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,8 +30,6 @@ public class DesertUI {
 
             }
         });
-
-
         AddDesert.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -122,11 +113,9 @@ public class DesertUI {
             return true;
         return false;
     }
-
     public JPanel getPanel() {
         return DesertPanel;
     }
-
     public JLabel getTypePrice1()
     {
         return TypePrice1;
@@ -151,12 +140,9 @@ public class DesertUI {
     {
         return  TypePrice6;
     }
-
-
     public void setTypePrice1(javax.swing.JLabel typePrice1) {
         TypePrice1 = typePrice1;
     }
-
     public void setTypePrice2(JLabel typePrice2) {
         TypePrice2 = typePrice2;
     }
@@ -164,19 +150,15 @@ public class DesertUI {
     {
         TypePrice3 = typePrice3;
     }
-
     public void setTypePrice4(JLabel typePrice4) {
         TypePrice4 = typePrice4;
     }
-
     public void setTypePrice5(JLabel typePrice5) {
         TypePrice5 = typePrice5;
     }
-
     public void setTypePrice6(JLabel typePrice6) {
         TypePrice6 = typePrice6;
     }
-
     public JRadioButton getType1()
     {
         return Type1;
@@ -186,12 +168,10 @@ public class DesertUI {
         return Type2;
 
     }
-
     public JRadioButton getType3()
     {
         return Type3;
     }
-
     public JRadioButton getType4()
     {
         return Type4;
@@ -200,10 +180,8 @@ public class DesertUI {
     {
         return Type5;
     }
-
     public JRadioButton getType6()
     {
         return Type6;
     }
-
 }
