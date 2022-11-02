@@ -1,16 +1,17 @@
 package UI;
-
-import Models.CodeSource;
-
+import Models.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.util.ArrayList;
 
 public class PrincipalPageUI {
     private static PrincipalPageUI Instance = new PrincipalPageUI();
     private static String ADMINISTRATOR = "Admin"; // adaugare produs
+    private static String PP = "PrincipalePage"; // adaugare produs
+    private static String LOGIN = "Login"; // adaugare produs
     private static String COMMAND = "Command"; // comanda mea
 
     private static String PIZZA ="Pizza"; // pizza
@@ -25,12 +26,12 @@ public class PrincipalPageUI {
     private JRadioButton Soup;
     private JRadioButton Pizza;
     private JRadioButton Desert;
-    private JRadioButton MenuOfTheDay;
-    private JButton Search;
+    private JRadioButton Drink;
     private JButton MyOrder;
     private JButton Purchase;
     private JPanel PrincipalPanel;
     private JButton AdaugareProdusBtn;
+    private JButton LogOut;
 
     private PrincipalPageUI() {
 
@@ -38,23 +39,33 @@ public class PrincipalPageUI {
             @Override
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
-                if(MenuOfTheDay.isSelected()){
+                if(Drink.isSelected()){
                     //Purchast face e e nevoie altfel da eroare
                 }else if(true){
                     //daca comanda mea este populata Purchast face ce trebuie altfel da mesaj de eroare
                 }
-                AdaugareProdusBtn.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        CodeSource.getInstance().setVisible(ADMINISTRATOR); // adaugare produs
-                    }
-                });
+            }
+        });
+
+        AdaugareProdusBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Message();
+                CodeSource.getInstance().setVisible(PP);
             }
         });
 
         MyOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ArrayList<String> list = new ArrayList<String>();
+                var sum = 0;
+                for(Produs i : CodeSource.getInstance().getMyComandList()){
+                    list.add(PrincipalPageUI.getInstance().toString(i));
+                    sum += i.getPrice();
+                }
+                ComandaMeaPageUI.getInstance().setTotalPayment(sum);
+                ComandaMeaPageUI.getInstance().setListOrder(list);
                 CodeSource.getInstance().setVisible(COMMAND);// comanda mea
             }
         });
@@ -62,23 +73,24 @@ public class PrincipalPageUI {
         Purchase.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // daca selectezi supa sa te duca in menuil de supa
-                //daca selectezi meniul de pizza sa te duca la meniu de pizza
-                //if()
+                if(Pizza.isSelected())
                     CodeSource.getInstance().setVisible(PIZZA);
-                //if()
+                if(Soup.isSelected())
                     CodeSource.getInstance().setVisible(SOUP);
-                //if()
+                if(Desert.isSelected())
                     CodeSource.getInstance().setVisible(DESERT);
-                //if()
+                if(Drink.isSelected())
                     CodeSource.getInstance().setVisible(DRINK);
-
-
             }
         });
 
 
-
+        LogOut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CodeSource.getInstance().setVisible(LOGIN);
+            }
+        });
     }
 
     public static PrincipalPageUI getInstance(){
@@ -87,5 +99,47 @@ public class PrincipalPageUI {
 
     public JPanel getPanel(){
         return PrincipalPanel;
+    }
+
+    public JRadioButton getSoup(){
+        return Soup;
+    }
+
+    public JRadioButton getPizza(){
+        return Pizza;
+    }
+
+    public JRadioButton getDrink(){
+        return Drink;
+    }
+
+    public JRadioButton getDesert(){
+        return Desert;
+    }
+
+    public JButton getAdaugareProdusBtn(){
+        return AdaugareProdusBtn;
+    }
+
+    public String toString(Produs produs){
+        StringBuffer message = new StringBuffer();
+        if( produs.getClass().getTypeName() == "Models.Desert")
+            message.append(((Desert) produs).getName() + " ");
+        if (produs.getClass().getTypeName() == "Models.Drink")
+            message.append(((Drink)produs).getType() + " ");
+        if(produs.getClass().getTypeName() == "Models.Soup")
+            message.append(((Soup) produs).getName() + " ");
+        if(produs.getClass().getTypeName() == "Models.Pizza")
+            message.append(((Pizza) produs).getName() + " ");
+        message.append(produs.getPrice());
+        return message.toString();
+    }
+    private void Message(){
+        JOptionPane.showMessageDialog(
+                new JFrame(),
+                "Urmeaza a fi implementata!",
+                "Feature",
+                JOptionPane.ERROR_MESSAGE
+        );
     }
 }

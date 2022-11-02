@@ -1,6 +1,7 @@
 package UI;
 
 import Models.CodeSource;
+import Models.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -10,11 +11,10 @@ public class RegisterUI {
     private final String LOGIN = "Login";
     private static RegisterUI instance = new RegisterUI();
     private JPanel RegisterPanel;
-    private JTextField textFieldName;
-    private JTextField textFieldSecondName;
-    private JTextField textFieldAge;
-    private JPasswordField passwordField1;
-    private JButton LoginBtn;
+    private JTextField UserNameTF;
+    private JTextField NameTF;
+    private JTextField AgeTF;
+    private JPasswordField PasswordTF;
     private JButton ResetBtn;
     private JLabel Message1;
     private JLabel Message2;
@@ -32,18 +32,11 @@ public class RegisterUI {
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource()==ResetBtn)
                 {
-                    textFieldName.setText("");
-                    textFieldSecondName.setText("");
-                    textFieldAge.setText("");
-                    passwordField1.setText("");
+                    UserNameTF.setText("");
+                    NameTF.setText("");
+                    AgeTF.setText("");
+                    PasswordTF.setText("");
                 }
-            }
-        });
-        LoginBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible(LOGIN);
-
             }
         });
 
@@ -52,15 +45,9 @@ public class RegisterUI {
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource()==RegisterBtn)
                 {
-                    /*
-                    String userIdName = textFieldName.getText();
-                    String userIdSecondName = textFieldSecondName.getText();
-                    int userAge = Integer.parseInt(textFieldAge.getText());
-                    String password = String.valueOf(passwordField1.getPassword());
-                     */
+                    User user = new User(NameTF.getText(), UserNameTF.getText(),PasswordTF.getText(),Integer.parseInt(AgeTF.getText()));
+                    CodeSource.getInstance().addUser(user);
                     CodeSource.getInstance().setVisible(LOGIN);
-                    TextSuccessful.setText("Register successful");
-
                 }
             }
         });

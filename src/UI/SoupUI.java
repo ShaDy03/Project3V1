@@ -1,6 +1,9 @@
 package UI;
 import Models.CodeSource;
+import Models.Soup;
+
 import javax.swing.*;
+import javax.xml.crypto.Data;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -35,9 +38,61 @@ public class SoupUI {
         AddSoup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(Type1.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type1.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice1.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
+                if(Type2.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type2.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice2.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
+                if(Type3.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type3.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice3.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
+                if(Type4.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type4.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice4.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
+                if(Type5.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type5.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice5.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
+                if(Type6.isSelected()){
+                    Soup soup = new Soup();
+                    soup.setName(Type6.getText());
+                    soup.setPrice(Double.parseDouble(TypePrice6.getText()));
+                    soup.setBrand("Darina");
+                    soup.setUnit("Portie");
+                    soup.setQuantity(1);
+                    CodeSource.getInstance().addCommand(soup);
+                }
                 CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
-                //verificare ca este selectata macar una din variante
-                //in functie de ce avem in lista, tipurile de ciorbe se fac vizibile cu mesajul respectiv
             }
         });
     }

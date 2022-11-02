@@ -27,9 +27,19 @@ public class LoginPageUI {
         Login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(UserName.getText().equals("") || Password.getText().equals("")){
+                    Message();
+                    return;
+                }
                 for(User i: CodeSource.getInstance().getUserList()){
-                    if(i.getUserName().equals(UserName.getText()) && i.getPassword().equals(Password.getText()))
+                    if(i.getUserName().equals(UserName.getText()) && i.getPassword().equals(Password.getText())){
                         CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
+                        if(i.getRole() == "administrator")
+                            PrincipalPageUI.getInstance().getAdaugareProdusBtn().setVisible(true);
+                        else
+                            PrincipalPageUI.getInstance().getAdaugareProdusBtn().setVisible(false);
+                    }
+
                 }
             }
         });
@@ -41,5 +51,14 @@ public class LoginPageUI {
 
     public JPanel getPanel(){
         return LoginPanel;
+    }
+
+    private void Message(){
+        JOptionPane.showMessageDialog(
+                new JFrame(),
+                "Complecteaza toate camputrile!",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+        );
     }
 }

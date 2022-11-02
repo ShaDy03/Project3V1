@@ -1,6 +1,7 @@
 package UI;
 
 import Models.CodeSource;
+import Models.Pizza;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -37,8 +38,61 @@ public class PizzaUI {
         AddPizza.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(Type1.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type1.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice1.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
+                if(Type2.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type2.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice2.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
+                if(Type3.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type3.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice3.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
+                if(Type4.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type4.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice4.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
+                if(Type5.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type5.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice5.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
+                if(Type6.isSelected()){
+                    Pizza pizza = new Pizza();
+                    pizza.setName(Type6.getText());
+                    pizza.setPrice(Double.parseDouble(TypePrice6.getText()));
+                    pizza.setBrand("Darina");
+                    pizza.setUnit("Portie");
+                    pizza.setQuantity(1);
+                    CodeSource.getInstance().addCommand(pizza);
+                }
                 CodeSource.getInstance().setVisible(PRINCIPALEPAGE);
-                //Adaugare comanda, verificare comanda selectata.
             }
         });
     }

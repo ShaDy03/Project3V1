@@ -1,6 +1,7 @@
 package UI;
 
 import Models.CodeSource;
+import Models.Drink;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -39,7 +40,61 @@ public class DrinkUI {
         AddDrink.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //CodeSource.getInstance().setVisible(Drink);
+                if(Type1.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type1.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice1.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                if(Type2.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type2.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice2.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                if(Type3.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type3.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice3.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                if(Type4.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type4.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice4.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                if(Type5.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type5.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice5.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                if(Type6.isSelected()){
+                    Drink drink = new Drink();
+                    drink.setType(Type6.getText());
+                    drink.setPrice(Double.parseDouble(TypePrice6.getText()));
+                    drink.setBrand("Darina");
+                    drink.setUnit("Litri");
+                    drink.setQuantity(1);
+                    CodeSource.getInstance().addCommand(drink);
+                }
+                CodeSource.getInstance().setVisible(Drink);
             }
         });
     }

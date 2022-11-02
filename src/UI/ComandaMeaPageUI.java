@@ -5,13 +5,13 @@ import Models.CodeSource;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ComandaMeaPageUI {
 
-    private static String Comanda = "PrincipalePage";
+    private final String COMANDA = "PrincipalePage";
     private static ComandaMeaPageUI insance = new ComandaMeaPageUI();
     private JList ListOrder; // lista produse
-    private JButton PrincipalPageBtn;
     private JButton ContinueShoppingBtn;
     private JButton PlaceYourOrderBtn;
     private JLabel MessageYourOrder;
@@ -22,25 +22,19 @@ public class ComandaMeaPageUI {
 
     private ComandaMeaPageUI()
     {
-        PrincipalPageBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible(Comanda);
-
-            }
-        });
-
         ContinueShoppingBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                CodeSource.getInstance().setVisible(COMANDA);
             }
         });
 
         PlaceYourOrderBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Message();
+                CodeSource.getInstance().clearMyComandList();
+                CodeSource.getInstance().setVisible(COMANDA);
             }
         });
 
@@ -62,8 +56,20 @@ public class ComandaMeaPageUI {
     {
         return ComandaMeaPanel;
     }
+    public void setTotalPayment(double sum){
+        String suma = sum + " lei";
+        TotalPayment.setText(suma);
+    }
+    public void setListOrder(ArrayList<String> lista){
+        ListOrder.setListData(lista.toArray());
+    }
 
-
-
-
+    private void Message(){
+        JOptionPane.showMessageDialog(
+                new JFrame(),
+                "Comanda ta in valoare de " + TotalPayment.getText() + " a fost plasata!",
+                "Succesfuly",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+    }
 }

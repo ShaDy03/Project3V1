@@ -1,6 +1,7 @@
 package UI;
 
 import Models.CodeSource;
+import Models.Desert;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -41,9 +42,61 @@ public class DesertUI {
         AddDesert.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //CodeSource.getInstance().setVisible(Desert);
-
-
+                if(Type1.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type1.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice1.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                if(Type2.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type2.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice2.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                if(Type3.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type3.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice3.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                if(Type4.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type4.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice4.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                if(Type5.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type5.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice5.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                if(Type6.isSelected()){
+                    Desert desert = new Desert();
+                    desert.setName(Type6.getText());
+                    desert.setPrice(Double.parseDouble(TypePrice6.getText()));
+                    desert.setBrand("Darina");
+                    desert.setUnit("Bucata");
+                    desert.setQuantity(1);
+                    CodeSource.getInstance().addCommand(desert);
+                }
+                CodeSource.getInstance().setVisible(Desert);
             }
         });
     }
@@ -124,6 +177,33 @@ public class DesertUI {
         TypePrice6 = typePrice6;
     }
 
+    public JRadioButton getType1()
+    {
+        return Type1;
+    }
+    public JRadioButton getType2()
+    {
+        return Type2;
 
+    }
+
+    public JRadioButton getType3()
+    {
+        return Type3;
+    }
+
+    public JRadioButton getType4()
+    {
+        return Type4;
+    }
+    public JRadioButton getType5()
+    {
+        return Type5;
+    }
+
+    public JRadioButton getType6()
+    {
+        return Type6;
+    }
 
 }

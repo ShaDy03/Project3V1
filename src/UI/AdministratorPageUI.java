@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class AdministratorPageUI {
 
-    private static String Admin = "PrincipalePage";
+    private final String ADMIN = "PrincipalePage";
     public static AdministratorPageUI instance = new AdministratorPageUI();
     private JPanel AdministratorPanel;
     private JComboBox comboBox1;
@@ -23,22 +23,6 @@ public class AdministratorPageUI {
 
     private AdministratorPageUI()
     {
-        AdaugareBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //CodeSource.getInstance().setVisible(Admin);
-
-            }
-        });
-
-        PrincipalPageBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CodeSource.getInstance().setVisible(Admin);
-
-            }
-        });
-
     }
 
     public static AdministratorPageUI getInstance(){
